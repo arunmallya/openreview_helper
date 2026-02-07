@@ -132,8 +132,8 @@ class ORAPI:
                     conf_start = content.find("Confidence Level: ")
                     rating = int(content[rating_start:just_start].split(":")[1].strip())
                     confidence = int(content[conf_start:].split(":")[1].strip())
-                    final_rating_start = content.find("Final Rating:")
-                    final_rating_end = content.find("Final Rating Justification:")
+                    final_rating_start = content.find("Final Recommendation:")
+                    final_rating_end = content.find("Paper Strengths:")
                     if final_rating_start > 0:
                         final_rating = int(content[final_rating_start:final_rating_end].split(":")[1].strip())
 
